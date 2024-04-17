@@ -1,8 +1,10 @@
 using MvcCoreSASAlumnos.Helpers;
+using MvcCoreSASAlumnos.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddTransient<ServiceAzureAlumnos>();
 builder.Services.AddSingleton<HelperXml>();
 builder.Services.AddControllersWithViews();
 

@@ -4,11 +4,19 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Azure Alumnos SaS Token</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<form method="post">
+    <label>Introduzca curso: </label>
+    <input type="text" class="form-control" name="curso"/>
+    <button class="btn btn-info">
+        Mostrar alumnos
+    </button>
+</form>
+
+@if (Model != null)
+{
+    
 <table class="table">
     <thead>
         <tr>
@@ -57,3 +65,5 @@
 }
     </tbody>
 </table>
+
+}
